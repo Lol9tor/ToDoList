@@ -1,0 +1,24 @@
+<button id="back">Log out</button>
+<div class="row">
+    <label for="nameItem">Input</label>
+    <input type="text" id="nameItem"/>
+</div>
+<button id="addItem">Add</button>
+<span>The task's list:</span>
+<ul class="list">
+    {{# console.log(model) }}
+    {{# _.each(model, function(item, index) { }}
+    <li>
+        <div class="item">
+            <label class="topcoat-checkbox">
+                <input type="checkbox" id="resolved" data-index="{{ index }}" {{ item.solved ? 'checked=checked' : '' }}/>
+                <div class="topcoat-checkbox__checkmark">
+                </div>
+                {{ item.content }}
+            </label>
+            <br/>
+        </div>
+        <div class="delete"></div>
+    </li>
+    {{# }) }}
+</ul>
