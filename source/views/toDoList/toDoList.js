@@ -9,7 +9,6 @@
     onInitialize: function () {
         "use strict";
         this.model = RAD.model('itemCollection');
-        console.log(this.model);
     },
     onEndDetach: function () {
 
@@ -19,7 +18,6 @@
     },
     addItem: function () {
         var textItem = this.getItem(),
-            self = this,
             currUser = Parse.User.current();
         this.model.create({
             content: textItem,
@@ -27,9 +25,7 @@
             user: currUser,
             ACL: new Parse.ACL(currUser)
         });
-        //this.model.save();
         this.$('#nameItem').val('');
-        //this.bindModel(this.currentUser);
     },
     deleteItem: function (e) {
         var i = $(e.currentTarget).parents('li').index();
@@ -37,7 +33,6 @@
     },
     changeStatusItem: function (e) {
         var i = e.currentTarget.getAttribute('data-index');
-        console.log(i);
         var checkedItem = this.model.at(i);
         checkedItem.set({solved: !checkedItem.get('solved')});
         checkedItem.save();

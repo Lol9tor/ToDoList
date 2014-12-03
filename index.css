@@ -52,7 +52,17 @@ button{
     display: inline-block;
 }
 .item {
-
     float: left;
     width: 85%;
+}
+
+.list {
+    list-style-type: none;
+}
+
+.error{
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    border-radius: 25px;
 }

@@ -26,7 +26,7 @@
                 RAD.model('itemCollection').refresh();
             },
             error: function (user, error) {
-                console.log(error, 'ERROR!!!');
+                self.application.showError(error.code, error.message);
             }
         })
     },
@@ -40,16 +40,13 @@
                 var options = {
                     container_id: '#screen',
                     content: "view.toDoList",
-                    animation: 'slide',
-                    extras: {
-
-                    }
+                    animation: 'slide'
                 };
                 self.publish('navigation.show', options)
 
             },
             error: function(user, error) {
-                console.log(error, 'ERROR!!!');
+                self.application.showError(error.code, error.message);
             }
         });
     },

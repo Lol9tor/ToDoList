@@ -7,7 +7,8 @@
         "source/collections/itemCollection.js",
 
         "source/views/registration/registration.js",
-        "source/views/toDoList/toDoList.js"
+        "source/views/toDoList/toDoList.js",
+        "source/views/error/error.js"
     ];
 
     function onEndLoad() {

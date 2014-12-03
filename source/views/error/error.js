@@ -1,8 +1,11 @@
 RAD.view("view.error", RAD.Blanks.View.extend({
     url: 'source/views/error/error.html',
-    className: 'error',
+    className: 'dialog-view',
+    attributes: {
+        'data-role': 'dialog-view'
+    },
     events: {
-        'click button.close': 'closeDialog'
+        'click button.close-dialog': 'closeDialog'
     },
     onInitialize: function () {
         'use strict';
