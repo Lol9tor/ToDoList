@@ -1,9 +1,9 @@
 RAD.view("view.error", RAD.Blanks.View.extend({
     url: 'source/views/error/error.html',
-    className: 'dialog-view',
+/*    className: 'dialog-view',
     attributes: {
         'data-role': 'dialog-view'
-    },
+    },*/
     events: {
         'click button.close-dialog': 'closeDialog'
     },
